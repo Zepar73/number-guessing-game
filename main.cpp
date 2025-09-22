@@ -10,12 +10,24 @@ int main(){
     std::cout << "Please select the difficulty level: \n";
     std::cout << "1. Easy (10 chances)\n";
     std::cout << "2. Medium (5 chances\n)";
-    std::cout << "3. Hard (chances)\n";
+    std::cout << "3. Hard (3 chances)\n";
     std::cout << "Enter your choice: ";
     std::cin>> level;
 
+    int maxAttempts = 0;
+
     switch(level){
-        case 1: std::cout <<"You haave chosen Easy difficulty.\n";
+        case 1: std::cout <<"You have chosen Easy difficulty.\n";
+            maxAttempts = 10;
+            break;
+        case 2: std::cout <<"You have chosen Medium difficulty.\n";
+            maxAttempts = 5;
+            break;
+         case 3: std::cout <<"You have chosen Hard difficulty.\n";
+            maxAttempts = 3;
+            break;
+        default: std::cout << "Invalid input please choose again.\n";
+            maxAttempts = 0;
             break;
     }
     std::cout << "Let's start the game!";
